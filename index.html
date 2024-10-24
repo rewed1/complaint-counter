@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Days Without Complaints Counter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        #counter {
+            font-size: 48px;
+            margin: 20px;
+        }
+        .btn {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        #setCounterModal {
+            display: none;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+        }
+        input {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Days Without Customer Complaints</h1>
+    <div id="counter">0</div>
+    <button class="btn" onclick="resetCounter()">Reset</button>
+    <button class="btn" onclick="manuallySetCounter()">Set Days</button>
+
+    <!-- Modal to manually set the counter -->
+    <div id="setCounterModal">
+        <input type="number" id="manualDays" placeholder="Enter days">
+        <button class="btn" onclick="applyManualCounter()">Apply</button>
+        <button class="btn" onclick="closeModal()">Cancel</button>
+    </div>
+
+    <script src="counter.js"></script>
+</body>
+</html>
